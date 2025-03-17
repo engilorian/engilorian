@@ -1,17 +1,5 @@
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
 
-
-const shootSpin = keyframes`
-  0% {
-    transform: rotate(0deg) scale(1);
-  }
-  50% {
-    transform: rotate(360deg) scale(1.3);
-  }
-  100% {
-    transform: rotate(720deg) scale(1);
-  }
-`;
 
 export const Nav = styled.nav`
   background: ${({ theme }) => theme.colors.accent};
@@ -38,11 +26,6 @@ export const BrandLogo = styled.div`
 export const LogoImage = styled.img`
   height: 50px;
   width: auto;
-  will-change: transform;
-
-  &:hover {
-    animation: ${shootSpin} 1s ease-out;
-  }
 `;
 
 export const NavList = styled.ul`
@@ -53,7 +36,7 @@ export const NavList = styled.ul`
 
 export const NavItem = styled.li`
   a {
-    color: ${({ theme }) => theme.colors.background};
+    color: ${({ theme }) => theme.colors.text.primary};
     font-size: ${({ theme }) => theme.fonts.sizes.xl};
 
     &:hover {

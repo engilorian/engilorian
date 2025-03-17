@@ -5,6 +5,8 @@ import Link from "next/link";
 import { FaYoutube } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 
+import { Stained } from "@/style/elements";
+
 import { Nav, Container, Brand, BrandLogo, LogoImage, NavList, NavItem } from "./styles";
 
 
@@ -15,7 +17,7 @@ const Navbar = () => {
         <Brand>
           <BrandLogo>
             <Link href="/">
-              <LogoImage src="/sapience.svg" alt="Sapience & Zeal" />
+              <LogoImage src="/favi.svg" alt="" />
             </Link>
           </BrandLogo>
         </Brand>
