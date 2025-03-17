@@ -1,19 +1,23 @@
 "use client";
 
 import DefaultLayout from "@/components/Layout/Default";
-import InterestsGrid from "@/components/Interests";
+import InterestAccordian from "@/components/InterestAccordian";
 
-import { Section, Container, Center, Spacer, Br, Heading, Text, Bold } from "@/style/elements";
+import { Section, Stained, Container, Center, Spacer, Br, Heading, Text, Bold } from "@/style/elements";
 
 
 export default function Page() {
   return (
     <DefaultLayout>
+
       <Section color="accent">
-        <Container>
+      <Container>
+        <Stained color="ruby">
+
           <Spacer />
-          <Heading>In Thought</Heading>
-          <Text>
+
+          <Heading color="light">In Thought</Heading>
+          <Text color="light">
             A man does not think freely unless he is willing to bear the <Bold>wounds</Bold> of his own mind.
             <Br />
             Knowledge is no passive indulgence, no banquet of trivia—it is a <Bold>debt</Bold>, exacted in loneliness, 
@@ -27,21 +31,27 @@ export default function Page() {
             <Br />
             Thought is no refuge. It is an <Bold>ordeal</Bold>. And I have no intention of seeking shelter.
           </Text>
-        </Container>
+
+        </Stained>
+      </Container>
       </Section>
 
       <Section color="foreground">
-        <Container>
-          <Center>
-            <InterestsGrid />
-          </Center>
-        </Container>
+      <Container>
+        <Center>
+
+          <InterestAccordian />
+
+        </Center>
+      </Container>
       </Section>
 
       <Section color="accent">
-        <Container>
+      <Container>
+        <Stained color="amethyst">
           <Center>
-            <Text>
+
+            <Text color="light">
               The <Bold>polar bear</Bold> is my amulet because it embodies an existence stripped to its essence—a being without pretense, 
               without illusion, forged by necessity alone. It is not a symbol of mere strength, but of absolute sovereignty over its 
               conditions. In the Arctic, there is no mercy, no indulgence, no falsehood—only the cold, the hunt, and survival. A creature 
@@ -57,8 +67,10 @@ export default function Page() {
               itself—to bear it without flinching, without retreat, and without the comfort of illusions. It is to embrace reality as it is, 
               to sharpen the will against adversity, and to walk forward—alone if necessary, but never lost.
             </Text>
+
           </Center>
-        </Container>
+        </Stained>
+      </Container>
       </Section>
 
     </DefaultLayout>
