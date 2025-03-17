@@ -29,7 +29,7 @@ export default function Page() {
             where <Bold>truth</Bold> is wrestled from deception, where history does not merely instruct but haunts, 
             here nature—vast, silent, and unyielding—carves its mark upon the soul.
             <Br />
-            Thought is no refuge. It is an <Bold>ordeal</Bold>. And I have no intention of seeking shelter.
+            Thought is no refuge. It is an <Bold>ordeal</Bold>.
           </Text>
 
         </Stained>
