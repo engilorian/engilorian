@@ -8,7 +8,7 @@ import {
   AccordionHeader, 
   MotionAccordionContent 
 } from "./styles";
-import { motion } from "framer-motion";
+
 
 const groupedInterests = [
   {
@@ -92,17 +92,17 @@ function InterestsAccordion() {
       {groupedInterests.map(({ category, description, interests }, index) => (
         <AccordionItem key={category}>
           <AccordionHeader onClick={() => toggleAccordion(index)}>
-            <SubHeading>{category}</SubHeading>
+            <SubHeading color="light" $hovercolor="primary">{category}</SubHeading>
           </AccordionHeader>
           <MotionAccordionContent
             variants={contentVariants}
             animate={openIndex === index ? "open" : "closed"}
             initial="closed"
           >
-            <Text>{description}</Text>
+            <Text color="light">{description}</Text>
             <List>
               {interests.map((item) => (
-                <ListItem key={item}>{item}</ListItem>
+                <ListItem color="light" key={item}>{item}</ListItem>
               ))}
             </List>
           </MotionAccordionContent>
