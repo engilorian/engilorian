@@ -1,5 +1,7 @@
 import { EB_Garamond, Open_Sans } from "next/font/google";
 
+import DefaultLayout from "./components/Layout/Default";
+
 
 const ebGaramond = EB_Garamond({
   variable: "--font-eb-garamond",
@@ -14,16 +16,23 @@ const openSans = Open_Sans({
 });
 
 export const metadata = {
-  title: "On Adrian Blanc",
+  title: "On The Engilorian",
   description: `
-    To seek knowledge is to bear the burden of truth—to confront the abyss of ignorance 
-    and carve meaning from its depths. Adrian Blanc does not pursue understanding as a 
-    passive observer but as one who wrestles with the raw forces of nature, history, and 
-    the human condition. His work is not bound by fleeting trends or idle speculation; 
-    it is a relentless inquiry into what governs reality and what shapes the soul. 
-    Knowledge is not a refuge—it is a crucible.
+    The Engilorian doth not merely witness—it endureth. Knowledge is no boon bestowed, but a thing taken—wrested from silence, smelted in tribulation, and beaten true upon the anvil of necessity. 
+    To seek wisdom is to descend, to suffer meaning, and to fashion the world not as it is, but as it wrestleth against thee—in wind, in stone, in fire—and yet yieldeth, if thou dare shape it.
   `,
-  keywords: ["Adrian Blanc", "Thinker", "Philosophy", "Science", "Engineering", "Nature", "History"],
+  keywords: [
+    "Engilorian",
+    "Kleos",
+    "Aether",
+    "Ordeal",
+    "Chrysopoeia",
+    "Duality",
+    "Dynamis",
+    "Fervor",
+    "Apotheosis",
+    "Exploration"
+  ],
   icons: { icon: "/favi.svg" },
 };
 
@@ -36,7 +45,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${ebGaramond.variable} ${openSans.variable}`}>
-        {children}
+       <DefaultLayout>
+       {children}
+       </DefaultLayout>
       </body>
     </html>
   );
