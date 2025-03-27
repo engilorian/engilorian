@@ -1,38 +1,77 @@
 "use client";
 
-import DefaultLayout from "@/components/Layout/Default";
-import InterestAccordian from "@/components/InterestAccordian";
+import Accordian from "@/components/Accordian";
+import Coat from "@/components/Coat";
 
-import { Section, Stained, Container, Center, Spacer, Br, Heading, Text, Bold } from "@/style/elements";
+import { Section, Stained, Container, Center, Spacer, Heading, Text } from "@/style/elements";
+
+
+const ideology = [
+  {
+    subject: "Kleos & Thus Aether",
+    description: "The ceaseless quest for glory eternal, and the immutable laws governing all existence.",
+    catalog: [
+      "Kleos (κλέος): Imperishable renown achieved by deeds, wisdom, and lasting legacy.",
+      "Aether (αἰθήρ): The celestial essence, the fifth element binding all reality—subtle yet profound.",
+      "Mastery of nature’s laws and the celestial forces shaping the cosmos.",
+      "Comprehension of Earth's hidden epochs, the layered passage of time, and whispers from antiquity.",
+      "Inspiration from nature’s perfected craft—biomimicry, intelligent adaptation, and crafted harmony.",
+    ],
+  },
+  {
+    subject: "Ordeal & Thus Chrysopoeia",
+    description: "Tribulation as the forge of wisdom; transformation as suffering’s higher purpose.",
+    catalog: [
+      "Ordeal: The trials borne willingly, tempering mind, flesh, and spirit alike.",
+      "Chrysopoeia (χρυσοποιία): The sacred art of transforming base elements into golden wisdom—the soul’s alchemy.",
+      "Philosophic tribulation—struggle as the guardian and giver of profound knowledge.",
+      "Metaphysical purification—transmuting chaos into cosmos, blindness into illumination.",
+      "Interpretation of myth, history, and philosophy as instruments of self-transformation.",
+    ],
+  },
+  {
+    subject: "Duality & Thus Dynamis",
+    description: "Tension between contraries as the wellspring of power and creative force.",
+    catalog: [
+      "Duality: The dance of opposing truths—order with chaos, sovereignty with surrender, luminance with shadow.",
+      "Dynamis (δύναμις): The latent force residing within opposition; the primal spark of all movement.",
+      "Essential paradox—truths inseparable from their contradictions.",
+      "Energy manifest as transformation—the friction and resistance from which greatness springs forth.",
+      "Doctrine of struggle—conflict as architect of profound identity and purpose.",
+    ],
+  },
+  {
+    subject: "Fervor & Thus Apotheosis",
+    description: "Unyielding ardor as the path ascending toward transcendence.",
+    catalog: [
+      "Fervor: The hallowed flame kindling creation, conquest, and enlightenment.",
+      "Apotheosis (ἀποθέωσις): Elevation beyond mortal bounds; the ascent to divine clarity.",
+      "The relentless impulse to create—manifesting divinity through art, science, architecture, and thought.",
+      "The psychology of ambition—unyielding pursuit, defiance of mortal limitation.",
+      "The inevitability of sacrifice—the readiness to burn wholly in pursuit of one's destiny.",
+    ],
+  },
+];
 
 
 export default function Page() {
   return (
-    <DefaultLayout>
-
+    <>
       <Section color="accent">
       <Container>
-        <Stained color="ruby">
+        <Center>
+        <Stained color="amethyst">
 
           <Spacer />
 
           <Heading color="light">In Thought</Heading>
+
           <Text color="light">
-            A man does not think freely unless he is willing to bear the <Bold>wounds</Bold> of his own mind.
-            <Br />
-            Knowledge is no passive indulgence, no banquet of trivia—it is a <Bold>debt</Bold>, exacted in loneliness, 
-            in struggle, in defiance of the world’s anesthetized illusions. Wisdom does not descend as a 
-            gift; it is torn from the <Bold>marrow</Bold> of existence, paid for in sleepless nights and the quiet terror 
-            of seeing much.
-            <Br />
-            Reality is no orderly theorem to be solved, no archive to be memorized, but a <Bold>battleground </Bold> 
-            where <Bold>truth</Bold> is wrestled from deception, where history does not merely instruct but haunts, 
-            here nature—vast, silent, and unyielding—carves its mark upon the soul.
-            <Br />
-            Thought is no refuge. It is an <Bold>ordeal</Bold>.
+            Wielding the gifts that Nature, in her wisdom, hath bestowed.
           </Text>
 
         </Stained>
+        </Center>
       </Container>
       </Section>
 
@@ -40,39 +79,13 @@ export default function Page() {
       <Container>
         <Center>
 
-          <InterestAccordian />
+          <Accordian data={ideology} />
 
         </Center>
       </Container>
       </Section>
 
-      <Section color="accent">
-      <Container>
-        <Stained color="amethyst">
-          <Center>
-
-            <Text color="light">
-              The <Bold>polar bear</Bold> is my amulet because it embodies an existence stripped to its essence—a being without pretense, 
-              without illusion, forged by necessity alone. It is not a symbol of mere strength, but of absolute sovereignty over its 
-              conditions. In the Arctic, there is no mercy, no indulgence, no falsehood—only the cold, the hunt, and survival. A creature 
-              that cannot endure does not exist.
-              <Br />
-              I align with it not because of some sentimental admiration, but because its nature mirrors my own. The Engilorian ethos is 
-              one of <Bold>isolation</Bold>, not as a burden but as a crucible—where one is either shaped into something formidable or broken 
-              into nothingness. The bear does not seek approval, nor does it bow to lesser forces. It moves alone, acts without hesitation, 
-              and stands as an <Bold>apex</Bold> entity in a world that does not care for its existence. That is not a lesson in power—it is 
-              a <Bold>law of being</Bold>.
-              <Br />
-              To take the <Bold>polar bear</Bold> as my amulet is not to claim strength, but to acknowledge the <Bold>weight of existence</Bold> 
-              itself—to bear it without flinching, without retreat, and without the comfort of illusions. It is to embrace reality as it is, 
-              to sharpen the will against adversity, and to walk forward—alone if necessary, but never lost.
-            </Text>
-
-          </Center>
-        </Stained>
-      </Container>
-      </Section>
-
-    </DefaultLayout>
+      <Coat />
+    </>
   );
 }
