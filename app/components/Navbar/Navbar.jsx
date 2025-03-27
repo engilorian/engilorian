@@ -1,38 +1,63 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
-import { FaYoutube } from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
+import { FiMenu, FiX } from "react-icons/fi";
 
-import { Stained } from "@/style/elements";
-
-import { Nav, Container, Brand, BrandLogo, LogoImage, NavList, NavItem } from "./styles";
+import {
+  Nav,
+  Container,
+  Brand,
+  BrandLogo,
+  LogoImage,
+  NavList,
+  NavItem,
+  Hamburger,
+  MobileMenu,
+} from "./styles";
 
 
 const Navbar = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const hasNavItems = false;
+
   return (
     <Nav>
       <Container>
         <Brand>
           <BrandLogo>
             <Link href="/">
-              <LogoImage src="/favi.svg" alt="" />
+              <LogoImage src="/favi.svg" alt="Engilorian Logo" />
             </Link>
           </BrandLogo>
         </Brand>
-        <NavList>
-          <NavItem>
-            <Link href="https://x.com/engilorian" target="_blank">
-              <FaXTwitter />
-            </Link>
-          </NavItem>
-          <NavItem>
-            <Link href="https://www.youtube.com/@engilorian" target="_blank">
-              <FaYoutube />
-            </Link>
-          </NavItem>
-        </NavList>
+
+        {hasNavItems && (
+          <Hamburger onClick={() => setMenuOpen(!menuOpen)}>
+            {menuOpen ? <FiX size={28} /> : <FiMenu size={28} />}
+          </Hamburger>
+        )}
+
+        {hasNavItems && (
+          <>
+            <NavList>
+              {/*
+              <NavItem><Link href="/">Ordinance</Link></NavItem>
+              <NavItem><Link href="/">Figures</Link></NavItem>
+              <NavItem><Link href="/">References</Link></NavItem>
+              */}
+            </NavList>
+
+            <MobileMenu $open={menuOpen}>
+              {/*
+              <NavItem><Link href="/">Ordinance</Link></NavItem>
+              <NavItem><Link href="/">Figures</Link></NavItem>
+              <NavItem><Link href="/">References</Link></NavItem>
+              */}
+            </MobileMenu>
+          </>
+        )}
       </Container>
     </Nav>
   );
