@@ -1,6 +1,7 @@
 import { EB_Garamond, Open_Sans } from "next/font/google";
 
 import DefaultLayout from "./components/Layout/Default";
+import StyledRegistry from "@/style/register";
 
 
 const ebGaramond = EB_Garamond({
@@ -45,9 +46,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${ebGaramond.variable} ${openSans.variable}`}>
-       <DefaultLayout>
-       {children}
-       </DefaultLayout>
+        <StyledRegistry>
+        <DefaultLayout>
+            {children}
+        </DefaultLayout>
+        </StyledRegistry>
       </body>
     </html>
   );
