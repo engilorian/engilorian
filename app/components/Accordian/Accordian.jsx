@@ -39,14 +39,14 @@ function Accordion({ data }) {
       {data.map(({ subject, description, catalog }, index) => (
         <AccordionItem key={subject}>
           <AccordionHeader onClick={() => toggleAccordion(index)}>
-            <SubHeading color="light" $hovercolor="primary">{subject}</SubHeading>
+            {subject}
           </AccordionHeader>
           <MotionAccordionContent
             variants={contentVariants}
             animate={openIndex === index ? "open" : "closed"}
             initial="closed"
           >
-            <Text color="light">{description}</Text>
+            <SubHeading color="light">{description}</SubHeading>
 
             {Array.isArray(catalog) && catalog.length > 0 && (
               <List>

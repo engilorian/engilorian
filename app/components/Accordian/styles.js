@@ -12,12 +12,18 @@ export const AccordionItem = styled.div`
 `;
 
 export const AccordionHeader = styled.div`
+  color: ${({ theme }) => theme.colors.text.light};
+  font-family: ${({ theme }) => theme.fonts.heading};
+  font-size: ${({ theme }) => theme.fonts.sizes.xl};
+  font-weight: ${({ theme }) => theme.fonts.weights.bold};
+  border-bottom: ${({ theme }) => theme.borders.thick};
+  border-color: ${({ theme }) => theme.colors.border.secondary};
   text-align: left;
   display: flex;
   align-items: center;
   justify-content: space-between;
   cursor: pointer;
-  padding: ${({ theme }) => theme.spacing.md} 0;
+  padding: ${({ theme }) => theme.spacing.lg};
 `;
 
 export const MotionAccordionContent = styled(motion.div)`

@@ -14,8 +14,10 @@ export const theme = {
       linkHover: "#405887",
     },
     border: {
-      primary: "black",
-      secondary: "#E6E6EA",
+      primary: "#FFB703",
+      secondary: "#FFE9CE",
+      dark: "#0A100D",
+      light: "#FFF3F0",
     },
     states: {
       success: "#6DA34D",

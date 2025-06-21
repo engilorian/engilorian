@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import Link from "next/link";
+import ExpandedMenu from "./Menu";
 import { FiMenu, FiX } from "react-icons/fi";
 
 import {
@@ -12,55 +12,47 @@ import {
   LogoImage,
   NavList,
   NavItem,
+  NavLink,
   Hamburger,
-  MobileMenu,
 } from "./styles";
 
 
-const Navbar = () => {
+export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
-  const hasNavItems = false;
+  
+  const links = [
+  ];
 
   return (
     <Nav>
       <Container>
         <Brand>
-          <BrandLogo>
-            <Link href="/">
-              <LogoImage src="/favi.svg" alt="Engilorian Logo" />
-            </Link>
+          <BrandLogo href="/">
+            <LogoImage src="/favi.svg" alt="Engilorian Logo" />
           </BrandLogo>
         </Brand>
 
-        {hasNavItems && (
+        {links.length > 0 && (
+          <NavList>
+            {links.map(({ href, label }) => (
+              <NavItem key={label}>
+                <NavLink href={href}>{label}</NavLink>
+              </NavItem>
+            ))}
+          </NavList>
+        )}
+
+        {links.length > 0 && (
           <Hamburger onClick={() => setMenuOpen(!menuOpen)}>
             {menuOpen ? <FiX size={28} /> : <FiMenu size={28} />}
           </Hamburger>
         )}
-
-        {hasNavItems && (
-          <>
-            <NavList>
-              {/*
-              <NavItem><Link href="/">Ordinance</Link></NavItem>
-              <NavItem><Link href="/">Figures</Link></NavItem>
-              <NavItem><Link href="/">References</Link></NavItem>
-              */}
-            </NavList>
-
-            <MobileMenu $open={menuOpen}>
-              {/*
-              <NavItem><Link href="/">Ordinance</Link></NavItem>
-              <NavItem><Link href="/">Figures</Link></NavItem>
-              <NavItem><Link href="/">References</Link></NavItem>
-              */}
-            </MobileMenu>
-          </>
-        )}
       </Container>
+
+      {links.length > 0 && (
+        <ExpandedMenu links={links} open={menuOpen} />
+      )}
     </Nav>
   );
-};
-
-export default Navbar;
+}

@@ -1,18 +1,20 @@
+import Link from "next/link";
 import styled from "styled-components";
+
 
 export const Nav = styled.nav`
   background: ${({ theme }) => theme.colors.accent};
-  padding: ${({ theme }) => theme.spacing.sm};
   position: relative;
   z-index: 999;
 `;
 
 export const Container = styled.div`
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: ${({ theme }) => theme.spacing.sm};
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
 `;
 
 export const Brand = styled.div`
@@ -20,7 +22,8 @@ export const Brand = styled.div`
   align-items: center;
 `;
 
-export const BrandLogo = styled.div`
+export const BrandLogo = styled(Link)`
+  display: block;
   cursor: pointer;
 `;
 
@@ -40,47 +43,74 @@ export const NavList = styled.ul`
 `;
 
 export const NavItem = styled.li`
+  cursor: pointer;
+`;
+
+export const NavLink = styled(Link)`
   color: ${({ theme }) => theme.colors.text.primary};
   font-family: ${({ theme }) => theme.fonts.heading};
   font-size: ${({ theme }) => theme.fonts.sizes.lg};
-  font-weight: ${({ theme }) => theme.fonts.weights.medium};
-  cursor: pointer;
+  font-weight: ${({ theme }) => theme.fonts.weights.bold};
+  text-decoration: none;
 
   &:hover {
     color: ${({ theme }) => theme.colors.primary};
   }
-
-  a {
-    text-decoration: none;
-    color: inherit;
-  }
 `;
 
 export const Hamburger = styled.div`
-  color: ${({ theme }) => theme.colors.text.primary};
   display: none;
   cursor: pointer;
+  color: ${({ theme }) => theme.colors.text.primary};
 
   @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
     display: block;
   }
 `;
 
-export const MobileMenu = styled.ul`
-  background: ${({ theme }) => theme.colors.accent};
-  border-bottom: ${({ theme }) => theme.borders.beefy};
-  border-color: ${({ theme }) => theme.colors.border.primary};
-  display: ${({ $open }) => ($open ? "flex" : "none")};
-  flex-direction: column;
-  list-style: none;
+export const MenuWrapper = styled.ul`
   position: absolute;
+  left: 0;
   top: 100%;
-  right: 0;
-  width: 100%;
-  padding: ${({ theme }) => theme.spacing.lg};
-  gap: ${({ theme }) => theme.spacing.md};
+  width: 100vw;
+  height: ${({ open }) => (open ? "calc(100vh - 64px)" : "0")};
+  background: ${({ theme }) => theme.colors.accent};
+  overflow: hidden;
+  z-index: 9999;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: ${({ open }) => (open ? "center" : "flex-start")};
+  gap: ${({ theme }) => theme.spacing.xl};
+  transition: height 0.3s cubic-bezier(.86,0,.07,1);
 
   @media (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
     display: none;
+  }
+`;
+
+
+export const MenuItem = styled.li`
+  cursor: pointer;
+`;
+
+export const MenuLink = styled(Link)`
+  text-decoration: none;
+  color: ${({ theme }) => theme.colors.text.primary};
+  font-family: ${({ theme }) => theme.fonts.heading};
+  font-size: ${({ theme }) => theme.fonts.sizes.xl};
+  font-weight: ${({ theme }) => theme.fonts.weights.bold};
+  border-bottom: ${({ theme }) => theme.borders.thick};
+  border-color: ${({ theme }) => theme.colors.border.primary};
+  text-align: center;
+  display: block;
+  width: 100vw;
+  padding: ${({ theme }) => theme.spacing.lg} 0;
+
+  &:hover {
+    color: ${({ theme }) => theme.colors.text.light};
+    background: ${({ theme }) => theme.colors.secondary}; 
   }
 `;

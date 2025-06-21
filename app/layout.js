@@ -17,22 +17,22 @@ const openSans = Open_Sans({
 });
 
 export const metadata = {
-  title: "On The Engilorian",
+  title: "Adrian Blanc - Engilorian",
   description: `
-    The Engilorian doth not merely witness—it endureth. Knowledge is no boon bestowed, but a thing taken—wrested from silence, smelted in tribulation, and beaten true upon the anvil of necessity. 
-    To seek wisdom is to descend, to suffer meaning, and to fashion the world not as it is, but as it wrestleth against thee—in wind, in stone, in fire—and yet yieldeth, if thou dare shape it.
+    Herein unfolds the chronicle of Adrian Blanc’s endeavors—projects wrought by his keen mind and steady hand, carried from the seeds of conception to the fires of realization.
+    Each craft bespeaks his relentless curiosity and mastery: from the alchemical forging of thought to the edifice of innovation.
+    Peruse these works and discern the measure of his skill, as one reads the veins that mark a noble stone.
   `,
   keywords: [
-    "Engilorian",
-    "Kleos",
-    "Aether",
-    "Ordeal",
-    "Chrysopoeia",
-    "Duality",
-    "Dynamis",
-    "Fervor",
-    "Apotheosis",
-    "Exploration"
+    "Portfolio", 
+    "Projects", 
+    "Craftsmanship", 
+    "Alchemy", 
+    "Science", 
+    "Engineering", 
+    "Artistry", 
+    "Innovation", 
+    "Wisdom"
   ],
   icons: { icon: "/favi.svg" },
 };

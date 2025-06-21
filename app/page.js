@@ -3,7 +3,7 @@
 import Accordian from "@/components/Accordian";
 import Coat from "@/components/Coat";
 
-import { Section, Stained, Container, Center, Spacer, Heading, Text } from "@/style/elements";
+import { Section, Stained, Container, Center, Spacer, Heading, SubHeading } from "@/style/elements";
 
 
 const ideology = [
@@ -66,9 +66,9 @@ export default function Page() {
 
           <Heading color="light">In Thought</Heading>
 
-          <Text color="light">
+          <SubHeading color="light">
             Wielding the gifts that Nature, in her wisdom, hath bestowed.
-          </Text>
+          </SubHeading>
 
         </Stained>
         </Center>

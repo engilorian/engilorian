@@ -4,8 +4,6 @@ import styled from "styled-components";
 export const Section = styled.section`
   background: ${({ color, theme }) =>
     theme.colors[color] || color || theme.colors.accent};
-  border-top: ${({ theme }) => theme.borders.beefy};
-  border-color: ${({ theme }) => theme.colors.border.primary};
   min-height: 20vh;
 `;
 
@@ -14,7 +12,7 @@ export const Stained = styled.div`
   width: 100%;
   background: none;
   border: ${({ theme }) => theme.borders.beefy};
-  border-color: ${({ theme }) => theme.colors.border.primary};
+  border-color: ${({ theme }) => theme.colors.border.dark};
   border-radius: ${({ theme }) => theme.borders.radius.md};
   padding: ${({ theme }) => theme.spacing.xl};
   overflow: hidden;
@@ -95,10 +93,10 @@ export const Heading = styled.h1`
 `;
 
 export const SubHeading = styled.h2`
-  color: ${({ color, theme }) => theme.colors.text[color] || theme.colors.text.primary};
+  color: ${({ color, theme }) => theme.colors.text[color] || theme.colors.text.secondary};
   font-family: ${({ theme }) => theme.fonts.heading};
-  font-size: ${({ theme }) => theme.fonts.sizes.xxl};
-  font-weight: ${({ theme }) => theme.fonts.weights.bold};
+  font-size: ${({ theme }) => theme.fonts.sizes.xl};
+  font-weight: ${({ theme }) => theme.fonts.weights.medium};
   margin-bottom: ${({ theme }) => theme.spacing.sm};
 
   &:hover {
