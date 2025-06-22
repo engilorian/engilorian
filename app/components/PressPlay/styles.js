@@ -16,17 +16,16 @@ const gradientShift = keyframes`
 export const PressPlayContainer = styled.div`
   background: linear-gradient(
     45deg,
-    ${({ theme }) => theme.colors.glass.ruby},
+    ${({ theme }) => theme.colors.glass.amethyst},
     ${({ theme }) => theme.colors.glass.golden},
-    ${({ theme }) => theme.colors.glass.crimson},
-    ${({ theme }) => theme.colors.glass.amethyst}
+    ${({ theme }) => theme.colors.glass.violet},
+    ${({ theme }) => theme.colors.glass.ruby}
   );
   background-size: 400% 400%;
   animation: ${gradientShift} 12s ease infinite;
   padding: ${({ theme }) => theme.spacing.lg};
   border-radius: ${({ theme }) => theme.borders.radius.md};
   box-shadow: ${({ theme }) => theme.shadows.soft};
-  max-width: 400px;
   margin: ${({ theme }) => theme.spacing.lg};
 `;
 

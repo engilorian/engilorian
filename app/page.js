@@ -115,6 +115,9 @@ export default function Page() {
             persistent murmur lies the faintest outlines of what the world might yet become.
           </SubHeading>
         </Bio>
+
+        <PressPlay spotifyId="0u6SJZRhC1KSguPxLACkt9" />
+
       </Container>
       </Section>
     </>
