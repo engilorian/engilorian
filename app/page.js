@@ -2,8 +2,21 @@
 
 import Accordian from "@/components/Accordian";
 import Coat from "@/components/Coat";
+import PressPlay from "@/components/PressPlay";
+import Bio from "@/components/Bio";
 
-import { Section, Stained, Container, Center, Spacer, Heading, SubHeading } from "@/style/elements";
+import { 
+  Section,
+  Stained,
+  Container,
+  Center,
+  Spacer,
+  Heading,
+  SubHeading,
+  Text,
+  List,
+  ListItem
+} from "@/style/elements";
 
 
 const ideology = [
@@ -86,6 +99,24 @@ export default function Page() {
       </Section>
 
       <Coat />
+
+      <Section color="foreground">
+      <Container>
+        <Bio src="/me.svg" alt="Portrait of Engilore">
+          <SubHeading color="light">
+            Each dawn finds me unmoored among shifting patterns of belief, where what I once held fast dissolves like mist at sunrise and new tremors of thought surge beneath 
+            the surface, unseen yet insistent. I trace the slender line where certainty meets its shadow, probing definitions that crumble at my touch and gathering the shards 
+            of insight they reveal. By mid-day, I drift through corridors of doubt, listening to the quiet resonance of questions that refuse easy answers—each one a glinting 
+            fragment in the vast mosaic of the unknown. As dusk deepens, I map the constellations of uncertainty overhead, weighing each flicker of possibility without tallying 
+            victory or defeat. In the spaces between decisions, I discover entire landscapes of nuance, where hesitation becomes its own guide and the weight of inherited norms 
+            falls away like autumn leaves. I collect the residue of restless wonder—those fleeting hesitations, the electric charge before revelation—and hold them close, for 
+            they are the true measure of what remains undone. No catalogue of triumphs binds me, nor ledger of regrets; instead, I dwell in the fertile tension of not-knowing, 
+            cultivating that abrasion of curiosity against every barrier. And when silence descends, I follow the faint echo of my own uncertainty, trusting that within its 
+            persistent murmur lies the faintest outlines of what the world might yet become.
+          </SubHeading>
+        </Bio>
+      </Container>
+      </Section>
     </>
   );
 }
