@@ -55,6 +55,31 @@ export const Stained = styled.div`
   }
 `;
 
+export const Row = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: ${({ theme }) => theme.spacing.xl};
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+`;
+
+export const RowItem = styled.div`
+  flex: 1;
+  min-width: 280px;
+
+  img {
+    max-width: 100%;
+    height: auto;
+    border-radius: ${({ theme }) => theme.borders.radius.md};
+  }
+`;
+
 export const Container = styled.div`
   max-width: 1200px;
   margin: 0 auto;
@@ -93,7 +118,7 @@ export const Heading = styled.h1`
 `;
 
 export const SubHeading = styled.h2`
-  color: ${({ color, theme }) => theme.colors.text[color] || theme.colors.text.secondary};
+  color: ${({ color, theme }) => theme.colors.text[color] || theme.colors.text.primary};
   font-family: ${({ theme }) => theme.fonts.heading};
   font-size: ${({ theme }) => theme.fonts.sizes.xl};
   font-weight: ${({ theme }) => theme.fonts.weights.medium};
