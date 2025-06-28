@@ -19,7 +19,7 @@ import {
 
 export default function Footer() {
   const links = [
-    { href: "/", label: "Contact" },
+    
   ];
 
   return (
