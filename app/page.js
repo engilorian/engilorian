@@ -157,7 +157,7 @@ export default function Page() {
 
       <Section color="foreground">
       <Container>
-        <Bio src="/me.svg" alt="Portrait of Engilore">
+        <Bio src="/me.jpg" alt="Portrait of Engilore">
           <SubHeading color="light">
             Each dawn finds me unmoored among shifting patterns of belief, where what I once held fast dissolves like mist at sunrise and new tremors of thought surge beneath 
             the surface, unseen yet insistent. I trace the slender line where certainty meets its shadow, probing definitions that crumble at my touch and gathering the shards 
