@@ -2,7 +2,6 @@
 
 import Accordian from "@/components/Accordian";
 import Coat from "@/components/Coat";
-import Bio from "@/components/Bio";
 
 import { 
   Section,
@@ -157,7 +156,6 @@ export default function Page() {
 
       <Section color="foreground">
       <Container>
-        <Bio src="/me.jpg" alt="Portrait of Engilore">
           <SubHeading color="light">
             Each dawn finds me unmoored among shifting patterns of belief, where what I once held fast dissolves like mist at sunrise and new tremors of thought surge beneath 
             the surface, unseen yet insistent. I trace the slender line where certainty meets its shadow, probing definitions that crumble at my touch and gathering the shards 
@@ -169,8 +167,6 @@ export default function Page() {
             cultivating that abrasion of curiosity against every barrier. And when silence descends, I follow the faint echo of my own uncertainty, trusting that within its 
             persistent murmur lies the faintest outlines of what the world might yet become.
           </SubHeading>
-        </Bio>
-
       </Container>
       </Section>
 
