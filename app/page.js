@@ -7,15 +7,11 @@ import {
   Section,
   Stained,
   Container,
-  Row,
-  RowItem,
   Center,
   Spacer,
   Heading,
   SubHeading,
   Text,
-  List,
-  ListItem
 } from "@/style/elements";
 
 
@@ -173,7 +169,7 @@ export default function Page() {
       <Section>
       <Container>
 
-        <Stained color="golden">
+        <Stained color="deepBlue">
           <Center>
 
             {profileSections.map((section) => (
